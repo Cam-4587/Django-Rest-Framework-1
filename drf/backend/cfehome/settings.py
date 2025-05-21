@@ -27,6 +27,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['.gitpod.io', 'localhost']
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://*.gitpod.io",
+    "https://*.herokuapp.com"
+]
 
 # Application definition
 
@@ -37,7 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'api'
+    'api',
+    'products'
 ]
 
 MIDDLEWARE = [
